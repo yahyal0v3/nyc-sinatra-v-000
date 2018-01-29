@@ -10,8 +10,8 @@
   <br>
   <h3>Or, choose from existing figures</h3>
   <% Figure.all.each do |figure| %>
-   <input type="checkbox" name="landmark[figure_ids][]" value="<%= figure.id %>" id="figure_<%= figure.id %>"
-   <%= 'checked' if @landmark.figure.include?(title) %>><%= figure.name %></input>
+   <input type="checkbox" name="landmark[figure_id]" value="<%= figure.id %>" id="figure_<%= figure.id %>"
+   <%= 'checked' if @landmark.figure.include?(figure) %>><%= figure.name %></input>
   <% end %>
   <br><br>
 
